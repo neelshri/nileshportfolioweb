@@ -40,7 +40,6 @@
 								<header class="major">
 
 								<!--	<h3>This Section contains information <br/>about my past job experiences and skills.</h3>-->
-
 <style>
   .certification-list {
     display: flex;
@@ -53,8 +52,13 @@
 
   .certification-list img {
     width: 200px;
-    height: auto;
-    margin-top: 0.5rem;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+  }
+
+  .certification-list img:hover {
+    transform: scale(1.02);
   }
 
   .certification-list article {
@@ -62,13 +66,22 @@
     padding-bottom: 1.5rem;
   }
 
-  .certification-list h2 a {
-    text-decoration: none;
-    color: #007BFF;
+  /* Lightbox styles */
+  .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
   }
 
-  .certification-list h2 a:hover {
-    text-decoration: underline;
+  .lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 0 0 20px #fff;
   }
 </style>
 
@@ -80,7 +93,7 @@
         AZ-104: Microsoft Certified: Azure Administrator Associate
       </a>
     </h2>
-    <img src="images/az104.jpg" alt="AZ-104 Certificate">
+    <img src="images/az104.jpg" alt="AZ-104" onclick="openLightbox(this.src)">
   </article>
 
   <article>
@@ -89,7 +102,7 @@
         DP-700: Microsoft Certified: Fabric Data Engineer Associate
       </a>
     </h2>
-    <img src="images/dp700.jpg" alt="DP-700 Certificate">
+    <img src="images/dp700.jpg" alt="DP-700" onclick="openLightbox(this.src)">
   </article>
 
   <article>
@@ -98,7 +111,7 @@
         Udemy: Complete A.I. & Machine Learning, Data Science Bootcamp
       </a>
     </h2>
-    <img src="images/udemy.jpg" alt="Udemy Certificate">
+    <img src="images/udemy.jpg" alt="Udemy" onclick="openLightbox(this.src)">
   </article>
 
   <article>
@@ -107,15 +120,33 @@
         Coursera: Foundations Data, Data, Everywhere
       </a>
     </h2>
-    <img src="images/coursera.jpg" alt="Coursera Certificate">
+    <img src="images/coursera.jpg" alt="Coursera" onclick="openLightbox(this.src)">
   </article>
 
   <article>
-    <h2>Be10X: AI Tools And ChatGPT Workshop</h2>
-    <img src="images/be10x.jpg" alt="Be10X Certificate">
+    <h2>Be10X: AI Tools And Chat GPT Workshop</h2>
+    <img src="images/be10x.jpg" alt="Be10X" onclick="openLightbox(this.src)">
   </article>
 
 </div>
+
+<!-- Lightbox overlay -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="Expanded view">
+</div>
+
+<script>
+  function openLightbox(src) {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    lightboxImg.src = src;
+    lightbox.style.display = "flex";
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+</script>
 
 
                   
