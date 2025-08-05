@@ -67,31 +67,30 @@
 										<li><a href="https://github.com/neelshri/Covid-19-Data-Exploration" class="button">Code</a></li>
 									</ul>
 								</article>
-								<style>
-  .project-list article {
-    margin-bottom: 40px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 20px;
+
+							<style>
+  .project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 700px;
+    margin: auto;
   }
 
   .project-list img {
-    width: 300px; /* smaller image width */
+    max-width: 100%;
     height: auto;
-    display: block;
-    margin-bottom: 10px;
+    width: 200px; /* Smaller image width */
   }
 
-  .project-list iframe {
-    width: 100%;
-    max-width: 600px;
-    height: 327px;
-    border: none;
-    margin-top: 10px;
+  .project-list article {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
   }
 </style>
 
-<section class="project-list">
-  
+<div class="project-list">
+
   <article>
     <header>
       <h2>
@@ -99,18 +98,18 @@
           Indian Cinema<br />Analysis
         </a>
       </h2>
+      <a href="#" class="image main">
+        <img src="images/pic01.jpg" alt="Indian Cinema Analysis" />
+      </a>
+      <p>
+        <li>Collected data using python web scraping libraries such as bs4/BeautifulSoup and requests.</li>
+        <li>Transformed the generated xlsx file into a MySql database using SQL Server Management Studio 2018.</li>
+        <li>Cleaned the data using MySql and <b>Alteryx</b></li>
+        <li>Used Tableau Public to publish the insights from the data.</li>
+      </p>
     </header>
-    <a href="#" class="image fit">
-      <img src="images/pic01.jpg" alt="Indian Cinema Analysis">
-    </a>
-    <ul>
-      <li>Collected data using Python web scraping libraries such as bs4/BeautifulSoup and requests.</li>
-      <li>Transformed the generated XLSX file into a MySQL database using SQL Server Management Studio 2018.</li>
-      <li>Cleaned the data using MySQL and <b>Alteryx</b>.</li>
-      <li>Used Tableau Public to publish the insights from the data.</li>
-    </ul>
     <ul class="actions special">
-      <li><a href="https://github.com/neelshri/Indian-Cinema-Analysis" class="button">Code</a></li>
+      <li><a href="https://github.com/neelshri/Indian-Cinema-Analysis" class="button large">Code</a></li>
     </ul>
   </article>
 
@@ -119,10 +118,11 @@
       <h2><a href="#">MySQL Learning</a></h2>
     </header>
     <a href="#" class="image fit">
-      <img src="images/pic03.jpg" alt="MySQL Learning">
+      <img src="images/pic03.jpg" alt="MySQL Learning" />
     </a>
     <p>
-      Did data exploration using MySQL queries to get a deeper knowledge of the same using industrial data downloaded from Kaggle. Performed JOINs, created views and procedures, and explored other SQL functions.
+      Did data exploration using MySQL queries to get a deeper knowledge of the same using industrial data which I downloaded from Kaggle.
+      Performed join functions, creating views and procedure creation and many other smaller functions on a sample data set.
     </p>
     <ul class="actions special">
       <li><a href="https://github.com/neelshri/SQL_basics" class="button">Code</a></li>
@@ -134,15 +134,18 @@
       <h2><a href="#">Gaming Data Exploration</a></h2>
     </header>
     <a href="#" class="image fit">
-      <img src="images/pic04.jpg" alt="Gaming Data Exploration">
+      <img src="images/pic04.jpg" alt="Gaming Data Exploration" />
     </a>
     <p>
-      Did data exploration using MySQL and Tableau to find insights on players using betting websites.
+      Did data exploration using MySQL and Tableau to find insights on the players who are using betting websites.
     </p>
-    <iframe src="https://onedrive.live.com/embed?cid=109CD1BDF4CCAA42&resid=109CD1BDF4CCAA42%215853&authkey=AAb0VkL7OW-td6c&em=2" 
-            frameborder="0" scrolling="yes"></iframe>
+    <iframe src="https://onedrive.live.com/embed?cid=109CD1BDF4CCAA42&resid=109CD1BDF4CCAA42%215853&authkey=AAb0VkL7OW-td6c&em=2" width="402" height="327" frameborder="0" scrolling="yes"></iframe>
   </article>
 
+</div>
+
+
+							
 </section>
 
 						<!-- Footer -->
@@ -195,5 +198,6 @@
 
 	</body>
 </html>
+
 
 
